@@ -1,0 +1,15 @@
+import tkinter as tk
+
+def open_admin():
+    tk.messagebox.showinfo("Adminbereich", "Admin-Modus geöffnet (Passwort: robin2010)")
+
+app = tk.Tk()
+app.title("Strafenkatalog")
+
+label = tk.Label(app, text="Strafenkatalog lädt...", font=("Arial", 16))
+label.pack(pady=50)
+
+admin_button = tk.Button(app, text="Admin 🔒", command=open_admin)
+admin_button.pack(side="bottom", pady=20)
+
+app.mainloop()
