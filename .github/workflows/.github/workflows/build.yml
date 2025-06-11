@@ -1,0 +1,30 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install pyinstaller
+        run: pip install pyinstaller
+
+      - name: Build .exe
+        run: pyinstaller --onefile main.py --icon=strafenkatalog_icon.ico
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/main.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
