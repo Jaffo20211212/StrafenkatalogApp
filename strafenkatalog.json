@@ -1,16 +1,16 @@
 [
   {
-    "Straftat": "Test",
-    "MIN. Bu\u00dfgeld": "$100",
-    "MAX. Bu\u00dfgeld": "$200",
-    "MIN. HE": "5",
-    "MAX. HE": "10"
+    "gesetz": "Test",
+    "min_bussgeld": 100,
+    "max_bussgeld": 200,
+    "min_he": 5,
+    "max_he": 10
   },
   {
-    "Straftat": "Neuer Test",
-    "MIN. Bu\u00dfgeld": "$100",
-    "MAX. Bu\u00dfgeld": "$200",
-    "MIN. HE": "5",
-    "MAX. HE": "10"
+    "gesetz": "Neuer Test",
+    "min_bussgeld": 100,
+    "max_bussgeld": 200,
+    "min_he": 5,
+    "max_he": 10
   }
 ]
